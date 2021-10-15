@@ -1,0 +1,57 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/covid_malaysia.csv"
+    },
+    "height": 400,
+    "width": 800,
+    "transform": [
+      {"filter": {"field": "year", "equal": 2020}}
+    ],
+    "title": "Covid cases (2020)",
+    "config": {
+        "view": {
+            "strokeWidth": 0,
+            "step": 13
+        },
+        "axis": {
+            "domain": false
+        }
+    },
+    "mark": "rect",
+    "encoding": {
+        "x": {
+            "field": "date",
+            "timeUnit": "date",
+            "type": "ordinal",
+            "title": "Day",
+            "axis": {
+                "labelAngle": 0,
+                "format": "%e"
+            }
+        },
+        "y": {
+            "field": "date",
+            "timeUnit": "month",
+            "type": "ordinal",
+            "title": "Month"
+        },
+        "color": {
+            "field": "cases_new",
+            "aggregate": "max",
+            "type": "quantitative",
+            "scale" : {
+              "type": "threshold",
+              "domain": [650, 8000, 15000, 22000],
+              "range": ["#feedde", "#fdbe85", "#fd8d3c", "#d94701", "#a63603"]
+            },
+            "legend": {
+                "title": "Total cases (per day)"
+            }
+        },
+        "tooltip": [
+          {"field": "cases_new", "type": "quantitative", "title": "Total cases"}
+        ]
+    }
+  }
+  

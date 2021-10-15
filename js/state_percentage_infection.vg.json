@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Percentage of infection of each state",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/master/public/data/malaysia-states.topojson",
+      "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+    },
+    "transform": [{
+        "lookup": "properties.Name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/covid_states_population.csv"
+          },
+          "key": "State",
+          "fields": ["Percentage infected"]
+        }
+      }
+    ],
+    "projection": {
+      "type": "equirectangular"
+    },
+    "mark": {
+      "type": "geoshape"
+      },
+    "encoding": {
+      "color": {
+        "field": "Percentage infected",
+        "type": "quantitative",
+        "scale": {
+          "type": "threshold",
+          "domain": [2, 5.5, 7],
+          "range": ["#fc9272", "#fb6a4a", "#de2d26", "#a50f15"]
+        }
+      },
+      "tooltip": [
+        {"field": "properties.Name", "type": "nominal", "title": "State"},
+        {"field": "Percentage infected", "type": "quantitative", "format": ".2f"}
+      ]
+    }
+  
+  }
+  

@@ -1,0 +1,87 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "How the Covid-19 situation has worsen in our country",
+    "repeat": ["cases_new_2020", "cases_new"],
+    "columns": 2,
+    "spec": {
+        "projection": {
+            "type": "equirectangular"
+        },
+        "width": 800,
+        "height": 600,
+        "layer": [{
+                "data": {
+                    "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/master/public/data/malaysia-states.topojson",
+                    "format": { "type": "topojson", "feature": "states" }
+                },
+                "mark": {
+                    "type": "geoshape",
+                    "fill": "#ddd",
+                    "stroke": "white",
+                    "strokeWidth": 1
+                }
+            },
+            {
+                "data": {
+                    "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/covid_state_year_concat.csv"
+                },
+                "transform": [{
+                    "lookup": "state",
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/master/public/data/malaysia-states.topojson",
+                            "format": {
+                                "type": "topojson",
+                                "feature": "states"
+                            }
+                        },
+                        "key": "properties.Name"
+                    },
+                    "as": "geo"
+                }],
+                "mark": { "type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5 },
+                "encoding": {
+                    "shape": { "field": "geo", "type": "geojson" },
+                    "color": {
+                        "field": { "repeat": "repeat" },
+                        "type": "quantitative",
+                        "scale": {
+                          "type": "threshold",
+                          "domain": [10000, 70000, 140000, 225000],
+                          "range": ["#fcbba1", "#fc9272", "#fb6a4a", "#de2d26", "#a50f15"]
+                        }
+                    },
+                    "tooltip": [
+                        { "field": "state", "type": "nominal", "title": "State" },
+                        {
+                            "field": { "repeat": "repeat" },
+                            "type": "quantitative",
+                            "title": "Total cases",
+                            "format": ","
+                        }
+                    ]
+                }
+            },
+            {
+                "data": {
+                    "values": [{
+                        "cases_new_2020": "Year: 2020",
+                        "cases_new": "Year: 2021"
+                    }]
+                },
+                "mark": {
+                    "type": "text",
+                    "align": "right",
+                    "baseline": "bottom",
+                    "x": "width",
+                    "y": 0
+                },
+                "encoding": {
+                    "text": { "field": { "repeat": "repeat" } }
+                }
+
+            }
+        ]
+    },
+    "config": {}
+}
