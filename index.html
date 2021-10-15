@@ -9,37 +9,90 @@
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
   
-  <h1>How Malaysia has handled Covid-19</h1>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-<p>This is how Malaysia compares to the rest of the world</p>
+  <div>
+    <h1 id="main_t">How has Malaysia handled Covid-19?</h1> 
+    <p id="main_p">We are gonna take a look at the spread of the virus througout the country against time</p>
+  </div>
   
-<div id="malaysian_map"></div>
-<div id="world_map"></div>
-<div id="bar_chart">
+  <div id="map_concat"></div>
 
-<script type="text/javascript">
-
-  var map_malaysia = "js/malaysian_map.vg.json";
-  vegaEmbed('#malaysian_map', map_malaysia).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
-
-
-<script type="text/javascript">
+  <div id="map_content">
+    <p class="graph_p">The two maps above has shown how the situation has worsen</p>
+  </div>
   
-  var map_world = "js/covid_world.vg.json";
-  vegaEmbed('#world_map', map_world).then(function(result) {
-  }).catch(console.error);
-</script>
+  <div id="heat_1"></div>
+  <div id="heat_2"></div>
+  <div id=heat_content>
+    <p class= "graph_p">Here's how the daily Covid cases of our country look like</p>
+  </div>
+
+  <div id="donut_content">
+    <h1 class= "graph_t">How the virus has infected people of differnt age group</h1>
+    <p class="graph_p">It is seen that the majority of the infected people are adults, with the percentage of infection being 70.8%</p>
+  </div> 
+  
+  <div id="donut">
+    <h1>How the virus has infected people of differnt age group</h1>
+    <p>It is seen that the majority of the infected people are adults, with the percentage of infection being 70.8%</p>
+  </div>
+
+<div id="area_vaccine"></div>
+
+  <!-- <div id="area_1"></div>
+  <div id="area_2"></div> -->
+
+
+  <script type="text/javascript">
+    var map_concat = "js/map_concat.vg.json";
+    vegaEmbed('#map_concat', map_concat).then(function(result) {
+    }).catch(console.error);
+  </script>
+
+  <script type="text/javascript">
+    var map_states = "js/state_percentage_infection.vg.json";
+    vegaEmbed('#map_states', map_states).then(function(result) {
+    }).catch(console.error);
+  </script>
+
+  <script type="text/javascript">
+    var donut = "js/cases_age_group.vg.json";
+    vegaEmbed('#donut', donut).then(function(result) {
+    }).catch(console.error);
+  </script>
+
+  <script type="text/javascript">
+    var area_1 = "js/cases_vaccinated_unvaccinated.vg.json";
+    vegaEmbed('#area_1', area_1).then(function(result) {
+    }).catch(console.error);
+  </script>
+
+  <script type="text/javascript">
+    var area_2 = "js/deaths_vaccinated_unvaccinated.vg.json";
+    vegaEmbed('#area_2', area_2).then(function(result) {
+    }).catch(console.error);
+  </script>
+
+  <script type="text/javascript">
+    var heat_1 = "js/cases_heat_map_2020.vg.json";
+    vegaEmbed('#heat_1', heat_1).then(function(result) {
+    }).catch(console.error);
+  </script>
+
+  <script type="text/javascript">
+    var heat_2 = "js/cases_heat_map_2021.vg.json";
+    vegaEmbed('#heat_2', heat_2).then(function(result) {
+    }).catch(console.error);
+  </script>
 
 <script type="text/javascript">
-  var bar = "js/covid_bar_malaysia.vg.json";
-  vegaEmbed('#bar_chart', bar).then(function(result){
+  var area_vaccine = "js/vaccine_malaysia.vg.json";
+  vegaEmbed('#area_vaccine', area_vaccine).then(function(result) {
   }).catch(console.error);
-
 </script>
 
 </body>
