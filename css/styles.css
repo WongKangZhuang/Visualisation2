@@ -1,32 +1,43 @@
-h1 {
-	font-size: 24px;
-	color: #990000;
+
+#main_t {
+	font-size: 60px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	color: #000000;
 }
 
-p {
-	font-size: 18px;
-	color: #990000;
+#main_p {
+	font-size: 50px;
 }
 
-#bar_chart{
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
+.graph_t {
+	font-size: 50px;
 }
 
-#malaysian_map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+.graph_p {
+	font-size: 35px;
 }
 
-#world_map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
+#map_concat {
+	height: 800px;
+	width: 800px;
 }
+
+#donut {
+	height: 400px;
+	width: 400px;
+}
+
+#heat_1 {
+	height: 400px;
+	width: 800px;
+}
+
+#heat_2 {
+	height: 400px;
+	width: 800px;
+}
+
+/* #map_concat {
+} */
+
