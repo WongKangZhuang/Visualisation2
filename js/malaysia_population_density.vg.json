@@ -35,7 +35,7 @@
       },
       "tooltip": [
         {"field": "properties.Name", "type": "nominal", "title": "State"},
-        {"field": "Population density", "type": "quantitative"}
+        {"field": "Population density", "type": "quantitative", "title": "Population density (Population per km squared)", "format": ".0f"}
       ]
     }
   

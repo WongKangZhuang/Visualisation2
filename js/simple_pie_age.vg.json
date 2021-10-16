@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Covid-19 cases among the age group",
-  "description": "A simple donut chart with embedded data.",
+  "height": 400,
+  "width": 400,
   "data": {
     "values": [
       {"category": "Child", "value": 13.8},

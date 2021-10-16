@@ -1,0 +1,122 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 800,
+  "params": [
+    {
+      "name": "month_selection",
+      "value": "January",
+      "bind": {
+      "input": "select",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+        ],
+      "labels":[
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+        ],
+      "name": "Month: "
+      }
+    },
+    {
+      "name": "year_selection",
+      "value": "2020",
+      "bind": {
+      "input": "select",
+      "options": [
+        "2020",
+        "2021"
+        ],
+      "labels":[
+        "2020",
+        "2021"
+        ],
+      "name": "Year: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.year == year_selection"},
+    {"filter": "datum.month == month_selection"}
+
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/cases_age_group_long.csv"
+  },
+  "encoding": {
+    "theta": {"field": "total_cases", "type": "quantitative", "stack": true},
+    "color": {
+      "field": "category", 
+      "type": "nominal",
+      "scale": {"range": ["#a6611a", "#018571", "#dfc27d", "#c7eae5"]},
+      "legend": {
+        "orient": "top-right",
+        "labelFontSize": 12,
+        "titleFontSize": 15
+      }
+    },
+    "tooltip": [
+      {"field": "category", "type": "ordinal", "title": "Age group"},
+      {"field": "total_cases", "type": "nominal", "title": "Total cases in the month"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "arc", 
+        "innerRadius": 80, 
+        "outerRadius": 120, 
+        "stroke": "#1B262C", 
+        "strokeWidth": 4,
+        "x": {"expr": "width / 2"}
+      }
+    },    
+    {
+      "mark": {
+        "type": "text",
+        "radius": 130,
+        "radiusOffset": 13,
+        "fontSize": 3
+        
+      },
+      "transform": [
+        {"calculate": "datum.total_cases + ' cases'", "as": "cases"}
+      ],
+      "encoding": {
+        "text": {
+          "field": "cases", "type": "nominal"
+        },
+        "size":{
+          "value": {"expr": "width/42"}
+        }
+      }
+     
+    }    
+  ],
+  "config": {
+    "legend": {
+      "titlePadding": 10
+    }
+  }
+}

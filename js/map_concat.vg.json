@@ -2,10 +2,11 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "How the Covid-19 situation has worsen in our country",
     "repeat": ["cases_new_2020", "cases_new"],
-    "columns": 2,
+    "columns": 1,
     "spec": {
         "projection": {
-            "type": "equirectangular"
+            "type": "conicEqualArea",
+            "rotate": [-120, 0, 0]
         },
         "width": 800,
         "height": 600,
