@@ -13,87 +13,114 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div>
-    <h1 id="main_t">How has Malaysia handled Covid-19?</h1> 
-    <p id="main_p">We are gonna take a look at the spread of the virus througout the country against time</p>
-  </div>
-  
-  <div id="map_concat"></div>
+    <div class="page">
+        <div id="maintitle">Covid-19 Malaysia</div>
 
-  <div id="map_content">
-    <p class="graph_p">The two maps above has shown how the situation has worsen</p>
-  </div>
-  
-  <div id="heat_1"></div>
-  <div id="heat_2"></div>
-  <div id=heat_content>
-    <p class= "graph_p">Here's how the daily Covid cases of our country look like</p>
-  </div>
+        <h1>What damange has Covid-19 done to our country</h1>
+        <h2>The 2 maps below encodes the total number of Covid-19 cases in each year of 2020 and 2021</h2>
 
-  <div id="donut_content">
-    <h1 class= "graph_t">How the virus has infected people of differnt age group</h1>
-    <p class="graph_p">It is seen that the majority of the infected people are adults, with the percentage of infection being 70.8%</p>
-  </div> 
-  
-  <div id="donut">
-    <h1>How the virus has infected people of differnt age group</h1>
-    <p>It is seen that the majority of the infected people are adults, with the percentage of infection being 70.8%</p>
-  </div>
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="map_concat" class="vis-container"></div>
+                <p class="content">We can see how the situation has deteriorated from the year 2020 to 2021</p>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+        <br>
 
-<div id="area_vaccine"></div>
+        <hr class="hr3">
+        
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h2>The map below shows the total cases and death of our country</h2>
+                <div id="map_layered" class="vis-container"></div>
+                <p class="content">States that have it the worst are major cities, with Selangor having it the hardest, followed by Kuala Lumpur</p>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+        <br>
 
-  <!-- <div id="area_1"></div>
-  <div id="area_2"></div> -->
+            <hr class="hr3">
+
+            <h2>The daily number of cases (2020 vs 2021)</h2>
+            <!-- pure grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="heat_1" class="heat_container"></div>
+                </div>
+                <div class="pure-u-1-1">
+                  <div id="heat_2" class="heat-container"></div>
+              </div>
+            </div>
+            <!-- end pure grid group -->
+            <br>
+
+            <hr class="hr3">
 
 
-  <script type="text/javascript">
-    var map_concat = "js/map_concat.vg.json";
-    vegaEmbed('#map_concat', map_concat).then(function(result) {
-    }).catch(console.error);
-  </script>
+            <h2>Those who have been infected with Covid-19</h2>
+            <!-- pure grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="donut" class="vis-container"></div>
+                    <p>The majority of those who are infected are adults, with the percentage of adults infected being at <b>70.8%</b><p>
+                </div>
+            </div>
+            <!-- end pure grid group -->
+            <br>
 
-  <script type="text/javascript">
-    var map_states = "js/state_percentage_infection.vg.json";
-    vegaEmbed('#map_states', map_states).then(function(result) {
-    }).catch(console.error);
-  </script>
+            <hr class="hr3">
 
-  <script type="text/javascript">
-    var donut = "js/cases_age_group.vg.json";
-    vegaEmbed('#donut', donut).then(function(result) {
-    }).catch(console.error);
-  </script>
+            <h2>National COVID-19 Immunisation Programme</h2>
+            <!-- pure grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="vax_area"></div>
+                </div>
+            </div>
+            <!-- end pure grid group -->
 
-  <script type="text/javascript">
-    var area_1 = "js/cases_vaccinated_unvaccinated.vg.json";
-    vegaEmbed('#area_1', area_1).then(function(result) {
-    }).catch(console.error);
-  </script>
+            <hr class="hr3">
 
-  <script type="text/javascript">
-    var area_2 = "js/deaths_vaccinated_unvaccinated.vg.json";
-    vegaEmbed('#area_2', area_2).then(function(result) {
-    }).catch(console.error);
-  </script>
+            <div class="pure-g">
+                <div class="pure-u-1-1 small-font">
+                    <p>&copy; 2021 <a href="https://github.com/KaneSec/vega_lite" target="_blank">Kane Li</a>. Copyright reserved. Those examples are for educational purpose only.
+                </div>
+            </div>
 
-  <script type="text/javascript">
-    var heat_1 = "js/cases_heat_map_2020.vg.json";
-    vegaEmbed('#heat_1', heat_1).then(function(result) {
-    }).catch(console.error);
-  </script>
+    </div>
 
-  <script type="text/javascript">
-    var heat_2 = "js/cases_heat_map_2021.vg.json";
-    vegaEmbed('#heat_2', heat_2).then(function(result) {
-    }).catch(console.error);
-  </script>
 
-<script type="text/javascript">
-  var area_vaccine = "js/vaccine_malaysia.vg.json";
-  vegaEmbed('#area_vaccine', area_vaccine).then(function(result) {
-  }).catch(console.error);
-</script>
+    <script type="text/javascript">
+        var map_concat = "js/map_concat.vg.json";
+        vegaEmbed('#map_concat', map_concat);
 
+        var map_layered = "js/layered_map.vg.json";
+        vegaEmbed('#map_layered', map_layered);
+
+        var map_2 = "js/state_total_covid.vg.json";
+        vegaEmbed('#map_2', map_2);
+
+        var heat_1 = "js/cases_heat_map_2020.vg.json";
+        vegaEmbed('#heat_1', heat_1);
+
+        var heat_2 = "js/cases_heat_map_2021.vg.json";
+        vegaEmbed('#heat_2', heat_2);
+
+        var donut = "js/age_group.vg.json";
+        vegaEmbed('#donut', donut);
+        
+        var vax_area = "js/vaccine_malaysia.vg.json";
+        vegaEmbed('#vax_area', vax_area);
+
+
+
+        print(brush)
+    </script>
 </body>
+
 </html>
