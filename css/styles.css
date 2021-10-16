@@ -1,43 +1,48 @@
-
-#main_t {
-	font-size: 60px;
-	font-family: 'Roboto', sans-serif;
-	text-align: center;
-	color: #000000;
+.vis-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#main_p {
-	font-size: 50px;
+#maintitle {
+    font-size: 80px;
+    text-align: center;
+    color: #ED6663;
 }
 
-.graph_t {
-	font-size: 50px;
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #252222;
 }
 
-.graph_p {
-	font-size: 35px;
+h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #252222;
 }
 
-#map_concat {
-	height: 800px;
-	width: 800px;
+.heat_containter {
+	width: 50%;
 }
 
-#donut {
-	height: 400px;
-	width: 400px;
+.content {
+	font-size: 30px;
 }
 
-#heat_1 {
-	height: 400px;
-	width: 800px;
+
+.page {
+    width: 1024px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-#heat_2 {
-	height: 400px;
-	width: 800px;
+.hr3 {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, rgb(145, 55, 55), transparent);
+    padding-top: 5px;	
 }
-
-/* #map_concat {
-} */
-
