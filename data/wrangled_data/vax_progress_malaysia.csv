@@ -1,101 +1,201 @@
-﻿Row,Col,vax_status,Percentage
-1,1,Fully vaccinated,67.8
-1,2,Fully vaccinated,67.8
-1,3,Fully vaccinated,67.8
-1,4,Fully vaccinated,67.8
-1,5,Fully vaccinated,67.8
-1,6,Fully vaccinated,67.8
-1,7,Fully vaccinated,67.8
-1,8,Fully vaccinated,67.8
-1,9,Fully vaccinated,67.8
-1,10,Fully vaccinated,67.8
-2,1,Fully vaccinated,67.8
-2,2,Fully vaccinated,67.8
-2,3,Fully vaccinated,67.8
-2,4,Fully vaccinated,67.8
-2,5,Fully vaccinated,67.8
-2,6,Fully vaccinated,67.8
-2,7,Fully vaccinated,67.8
-2,8,Fully vaccinated,67.8
-2,9,Fully vaccinated,67.8
-2,10,Fully vaccinated,67.8
-3,1,Fully vaccinated,67.8
-3,2,Fully vaccinated,67.8
-3,3,Fully vaccinated,67.8
-3,4,Fully vaccinated,67.8
-3,5,Fully vaccinated,67.8
-3,6,Fully vaccinated,67.8
-3,7,Fully vaccinated,67.8
-3,8,Fully vaccinated,67.8
-3,9,Fully vaccinated,67.8
-3,10,Fully vaccinated,67.8
-4,1,Fully vaccinated,67.8
-4,2,Fully vaccinated,67.8
-4,3,Fully vaccinated,67.8
-4,4,Fully vaccinated,67.8
-4,5,Fully vaccinated,67.8
-4,6,Fully vaccinated,67.8
-4,7,Fully vaccinated,67.8
-4,8,Fully vaccinated,67.8
-4,9,Fully vaccinated,67.8
-4,10,Fully vaccinated,67.8
-5,1,Fully vaccinated,67.8
-5,2,Fully vaccinated,67.8
-5,3,Fully vaccinated,67.8
-5,4,Fully vaccinated,67.8
-5,5,Fully vaccinated,67.8
-5,6,Fully vaccinated,67.8
-5,7,Fully vaccinated,67.8
-5,8,Fully vaccinated,67.8
-5,9,Fully vaccinated,67.8
-5,10,Fully vaccinated,67.8
-6,1,Fully vaccinated,67.8
-6,2,Fully vaccinated,67.8
-6,3,Fully vaccinated,67.8
-6,4,Fully vaccinated,67.8
-6,5,Fully vaccinated,67.8
-6,6,Fully vaccinated,67.8
-6,7,Fully vaccinated,67.8
-6,8,Fully vaccinated,67.8
-6,9,Fully vaccinated,67.8
-6,10,Fully vaccinated,67.8
-7,1,Fully vaccinated,67.8
-7,2,Fully vaccinated,67.8
-7,3,Fully vaccinated,67.8
-7,4,Fully vaccinated,67.8
-7,5,Fully vaccinated,67.8
-7,6,Fully vaccinated,67.8
-7,7,Fully vaccinated,67.8
-7,8,Fully vaccinated,67.8
-7,9,Partially vaccinated,75.7
-7,10,Partially vaccinated,75.7
-8,1,Partially vaccinated,75.7
-8,2,Partially vaccinated,75.7
-8,3,Partially vaccinated,75.7
-8,4,Partially vaccinated,75.7
-8,5,Partially vaccinated,75.7
-8,6,Not vaccinated,24.3
-8,7,Not vaccinated,24.3
-8,8,Not vaccinated,24.3
-8,9,Not vaccinated,24.3
-8,10,Not vaccinated,24.3
-9,1,Not vaccinated,24.3
-9,2,Not vaccinated,24.3
-9,3,Not vaccinated,24.3
-9,4,Not vaccinated,24.3
-9,5,Not vaccinated,24.3
-9,6,Not vaccinated,24.3
-9,7,Not vaccinated,24.3
-9,8,Not vaccinated,24.3
-9,9,Not vaccinated,24.3
-9,10,Not vaccinated,24.3
-10,1,Not vaccinated,24.3
-10,2,Not vaccinated,24.3
-10,3,Not vaccinated,24.3
-10,4,Not vaccinated,24.3
-10,5,Not vaccinated,24.3
-10,6,Not vaccinated,24.3
-10,7,Not vaccinated,24.3
-10,8,Not vaccinated,24.3
-10,9,Not vaccinated,24.3
-10,10,Not vaccinated,24.3
+﻿Row,Col,ID,vax_status,Percentage
+1,1,Malaysia,Fully vaccinated,67.8
+1,2,Malaysia,Fully vaccinated,67.8
+1,3,Malaysia,Fully vaccinated,67.8
+1,4,Malaysia,Fully vaccinated,67.8
+1,5,Malaysia,Fully vaccinated,67.8
+1,6,Malaysia,Fully vaccinated,67.8
+1,7,Malaysia,Fully vaccinated,67.8
+1,8,Malaysia,Fully vaccinated,67.8
+1,9,Malaysia,Fully vaccinated,67.8
+1,10,Malaysia,Fully vaccinated,67.8
+2,1,Malaysia,Fully vaccinated,67.8
+2,2,Malaysia,Fully vaccinated,67.8
+2,3,Malaysia,Fully vaccinated,67.8
+2,4,Malaysia,Fully vaccinated,67.8
+2,5,Malaysia,Fully vaccinated,67.8
+2,6,Malaysia,Fully vaccinated,67.8
+2,7,Malaysia,Fully vaccinated,67.8
+2,8,Malaysia,Fully vaccinated,67.8
+2,9,Malaysia,Fully vaccinated,67.8
+2,10,Malaysia,Fully vaccinated,67.8
+3,1,Malaysia,Fully vaccinated,67.8
+3,2,Malaysia,Fully vaccinated,67.8
+3,3,Malaysia,Fully vaccinated,67.8
+3,4,Malaysia,Fully vaccinated,67.8
+3,5,Malaysia,Fully vaccinated,67.8
+3,6,Malaysia,Fully vaccinated,67.8
+3,7,Malaysia,Fully vaccinated,67.8
+3,8,Malaysia,Fully vaccinated,67.8
+3,9,Malaysia,Fully vaccinated,67.8
+3,10,Malaysia,Fully vaccinated,67.8
+4,1,Malaysia,Fully vaccinated,67.8
+4,2,Malaysia,Fully vaccinated,67.8
+4,3,Malaysia,Fully vaccinated,67.8
+4,4,Malaysia,Fully vaccinated,67.8
+4,5,Malaysia,Fully vaccinated,67.8
+4,6,Malaysia,Fully vaccinated,67.8
+4,7,Malaysia,Fully vaccinated,67.8
+4,8,Malaysia,Fully vaccinated,67.8
+4,9,Malaysia,Fully vaccinated,67.8
+4,10,Malaysia,Fully vaccinated,67.8
+5,1,Malaysia,Fully vaccinated,67.8
+5,2,Malaysia,Fully vaccinated,67.8
+5,3,Malaysia,Fully vaccinated,67.8
+5,4,Malaysia,Fully vaccinated,67.8
+5,5,Malaysia,Fully vaccinated,67.8
+5,6,Malaysia,Fully vaccinated,67.8
+5,7,Malaysia,Fully vaccinated,67.8
+5,8,Malaysia,Fully vaccinated,67.8
+5,9,Malaysia,Fully vaccinated,67.8
+5,10,Malaysia,Fully vaccinated,67.8
+6,1,Malaysia,Fully vaccinated,67.8
+6,2,Malaysia,Fully vaccinated,67.8
+6,3,Malaysia,Fully vaccinated,67.8
+6,4,Malaysia,Fully vaccinated,67.8
+6,5,Malaysia,Fully vaccinated,67.8
+6,6,Malaysia,Fully vaccinated,67.8
+6,7,Malaysia,Fully vaccinated,67.8
+6,8,Malaysia,Fully vaccinated,67.8
+6,9,Malaysia,Fully vaccinated,67.8
+6,10,Malaysia,Fully vaccinated,67.8
+7,1,Malaysia,Fully vaccinated,67.8
+7,2,Malaysia,Fully vaccinated,67.8
+7,3,Malaysia,Fully vaccinated,67.8
+7,4,Malaysia,Fully vaccinated,67.8
+7,5,Malaysia,Fully vaccinated,67.8
+7,6,Malaysia,Fully vaccinated,67.8
+7,7,Malaysia,Fully vaccinated,67.8
+7,8,Malaysia,Fully vaccinated,67.8
+7,9,Malaysia,Partially vaccinated,75.7
+7,10,Malaysia,Partially vaccinated,75.7
+8,1,Malaysia,Partially vaccinated,75.7
+8,2,Malaysia,Partially vaccinated,75.7
+8,3,Malaysia,Partially vaccinated,75.7
+8,4,Malaysia,Partially vaccinated,75.7
+8,5,Malaysia,Partially vaccinated,75.7
+8,6,Malaysia,Not vaccinated,24.3
+8,7,Malaysia,Not vaccinated,24.3
+8,8,Malaysia,Not vaccinated,24.3
+8,9,Malaysia,Not vaccinated,24.3
+8,10,Malaysia,Not vaccinated,24.3
+9,1,Malaysia,Not vaccinated,24.3
+9,2,Malaysia,Not vaccinated,24.3
+9,3,Malaysia,Not vaccinated,24.3
+9,4,Malaysia,Not vaccinated,24.3
+9,5,Malaysia,Not vaccinated,24.3
+9,6,Malaysia,Not vaccinated,24.3
+9,7,Malaysia,Not vaccinated,24.3
+9,8,Malaysia,Not vaccinated,24.3
+9,9,Malaysia,Not vaccinated,24.3
+9,10,Malaysia,Not vaccinated,24.3
+10,1,Malaysia,Not vaccinated,24.3
+10,2,Malaysia,Not vaccinated,24.3
+10,3,Malaysia,Not vaccinated,24.3
+10,4,Malaysia,Not vaccinated,24.3
+10,5,Malaysia,Not vaccinated,24.3
+10,6,Malaysia,Not vaccinated,24.3
+10,7,Malaysia,Not vaccinated,24.3
+10,8,Malaysia,Not vaccinated,24.3
+10,9,Malaysia,Not vaccinated,24.3
+10,10,Malaysia,Not vaccinated,24.3
+1,1,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+1,2,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+1,3,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+1,4,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+1,5,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+1,6,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+1,7,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+1,8,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+1,9,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+1,10,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+2,1,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+2,2,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+2,3,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+2,4,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+2,5,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+2,6,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+2,7,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+2,8,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+2,9,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+2,10,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+3,1,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+3,2,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+3,3,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+3,4,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+3,5,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+3,6,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+3,7,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+3,8,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+3,9,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+3,10,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+4,1,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+4,2,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+4,3,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+4,4,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+4,5,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+4,6,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+4,7,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+4,8,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+4,9,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+4,10,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+5,1,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+5,2,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+5,3,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+5,4,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+5,5,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+5,6,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+5,7,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+5,8,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+5,9,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+5,10,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+6,1,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+6,2,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+6,3,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+6,4,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+6,5,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+6,6,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+6,7,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+6,8,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+6,9,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+6,10,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+7,1,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+7,2,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+7,3,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+7,4,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+7,5,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+7,6,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+7,7,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+7,8,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+7,9,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+7,10,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+8,1,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+8,2,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+8,3,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+8,4,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+8,5,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+8,6,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+8,7,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+8,8,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+8,9,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+8,10,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+9,1,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+9,2,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+9,3,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+9,4,Selangor and Kuala Lumpur,Fully vaccinated,83.5
+9,5,Selangor and Kuala Lumpur,Partially vaccinated,91.2
+9,6,Selangor and Kuala Lumpur,Partially vaccinated,91.2
+9,7,Selangor and Kuala Lumpur,Partially vaccinated,91.2
+9,8,Selangor and Kuala Lumpur,Partially vaccinated,91.2
+9,9,Selangor and Kuala Lumpur,Partially vaccinated,91.2
+9,10,Selangor and Kuala Lumpur,Partially vaccinated,91.2
+10,1,Selangor and Kuala Lumpur,Partially vaccinated,91.2
+10,2,Selangor and Kuala Lumpur,Not vaccinated,8.8
+10,3,Selangor and Kuala Lumpur,Not vaccinated,8.8
+10,4,Selangor and Kuala Lumpur,Not vaccinated,8.8
+10,5,Selangor and Kuala Lumpur,Not vaccinated,8.8
+10,6,Selangor and Kuala Lumpur,Not vaccinated,8.8
+10,7,Selangor and Kuala Lumpur,Not vaccinated,8.8
+10,8,Selangor and Kuala Lumpur,Not vaccinated,8.8
+10,9,Selangor and Kuala Lumpur,Not vaccinated,8.8
+10,10,Selangor and Kuala Lumpur,Not vaccinated,8.8
