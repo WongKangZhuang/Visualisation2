@@ -16,82 +16,118 @@
 
 <body>
     <div class="page">
-        <div id="maintitle">Covid-19 Malaysia</div>
-
-        <h1>What damange has Covid-19 done to our country</h1>
-        <h2>The 2 maps below encodes the total number of Covid-19 cases in each year of 2020 and 2021</h2>
-
-        <!-- pure grid group -->
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <div id="map_concat" class="vis-container"></div>
-                <p class="content">We can see how the situation has deteriorated from the year 2020 to 2021</p>
+                <h1>Covid-19 Malaysia</h1>
             </div>
         </div>
-        <!-- end pure grid group -->
-        <br>
 
-        <hr class="hr3">
-        
-        <!-- pure grid group -->
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <h2>The map below shows the total cases and death of our country</h2>
+                <h2>Infection and Fatality due to Covid-19</h2>
+            </div>
+            <div class="pure-u-2-3">
                 <div id="map_layered" class="vis-container"></div>
-                <p class="content">States that have it the worst are major cities, with Selangor having it the hardest, followed by Kuala Lumpur</p>
+            </div>
+            <div class="pure-u-1-3">
+                <p>
+                    As illustrated with the map above, states that have the most Covid-19 cases and deaths caused by it are major cities such as <b>Selangor</b>, <b>Kuala Lumpur</b> and <b>Johor</b>
+
+                    <br>
+                    <br>
+                    
+                    With <b>Selangor</b> being the worst hit state, with <b>686,170</b> total cases and <b>9504</b> total deaths
+                </p>
             </div>
         </div>
-        <!-- end pure grid group -->
         <br>
 
-            <hr class="hr3">
-
-            <h2>The daily number of cases (2020 vs 2021)</h2>
-            <!-- pure grid group -->
-            <div class="pure-g">
-                <div class="pure-u-1-1">
-                    <div id="heat_1" class="heat_container"></div>
-                </div>
-                <div class="pure-u-1-1">
-                  <div id="heat_2" class="heat-container"></div>
-              </div>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h2>The daily number of cases</h2>
             </div>
-            <!-- end pure grid group -->
-            <br>
-
-            <hr class="hr3">
-
-
-            <h2>Those who have been infected with Covid-19</h2>
-            <!-- pure grid group -->
-            <div class="pure-g">
-                <div class="pure-u-1-1">
-                    <div id="donut" class="vis-container"></div>
-                    <p>The majority of those who are infected are adults, with the percentage of adults infected being at <b>70.8%</b><p>
-                </div>
+            <div class="pure-u-1-1">
+                <p>
+                    The heat maps below tell us about the multiple Covid-19 waves that we've gone through.
+                </p>
             </div>
-            <!-- end pure grid group -->
-            <br>
-
-            <hr class="hr3">
-
-            <h2>National COVID-19 Immunisation Programme</h2>
-            <!-- pure grid group -->
-            <div class="pure-g">
-                <div class="pure-u-1-1">
-                    <div id="vax_area"></div>
-                </div>
+            <div class="pure-u-1-2">
+                <div id="heat_1" class="vis-container"></div>
             </div>
-            <!-- end pure grid group -->
-
-            <hr class="hr3">
-
-            <div class="pure-g">
-                <div class="pure-u-1-1 small-font">
-                    <p>&copy; 2021 <a href="https://github.com/KaneSec/vega_lite" target="_blank">Kane Li</a>. Copyright reserved. Those examples are for educational purpose only.
-                </div>
+            
+            <div class="pure-u-1-2">
+                <div id="heat_2" class="vis-container"></div>
             </div>
+            <div class="pure-u-1-1">
+                <p>
+                    In these 2 years, we've gone through <b>4</b> waves of outbreak.
+                    <br>
+                    <br>
+                    However, the most recent outbreak was one of the worst, with <b>Delta</b> variant being the contributor to this havoc. This variant was believed to be first spotted 
+                    in our country on the 28th of July, which is concurrent with the 4th wave in Malaysia.
+                </p>
+            </div>
+        </div>
+        <br>
 
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h2>How does Covid-19 affect different age groups</h2>
+            </div>
+            <div class="pure-u-1-1">
+                <p>
+                    Since the start of the Covid-19 outbreak in Malaysia, the cases that have been reported are recorded into different age groups to provide better insights. 
+                </p>
+            </div>
+        </div>
+
+        <div class="pure-u-1-2">
+            <div id="donut" class="vis-container"></div>
+        </div>
+
+        <div class="pure-u-1-1">
+            <p>
+                From this record, we see that the largest proportion of Covid-19 cases are adults, with <b>70.8%</b> of the total cases. The adult age group is consistently the largest portion every month since the outbreak in Malaysia.
+                <br>
+                <br>
+                The second biggest portion is the children age group, with <b>13.8%</b> of the total cases. However, the difference between the adult age group is rather drastic.
+            </p>
+        </div>
+        <br>
+
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h2>National COVID-19 Immunisation Programme</h2>
+                <h3>LINDUNG DIRI, LINDUNG SEMUA</h3>
+            </div>
+            <div class="pure-u-1-1">
+                <p>
+                    Vaccines are a collaborative effort of the world in order to curb the Covid-19 pandemic. 
+                    <br>
+                    <br>
+                    Malaysia started its vaccination programme, <b>National COVID-19 Immunisation Programme</b> on the 24th of February. 
+                    Since then, we've already achieved a partially vaccinated percentage and a fully vaccinated percentage of 75.1% and 65.6% respectively.
+                </p>
+            </div>
+        </div>
+
+        <div class="pure-u-1-2">
+            <div id="vax_area" class="vis-container"></div>
+        </div>
+
+        <div class="pure-u-1-1">
+            <p>
+                With great efforts from the government body of our country, our vaccination progress has been rapid. 
+                <br>
+                We were able to achieve a peak of <b>1-2%</b> of population vaccinated daily.
+            </p>
+        </div>
+
+        
+
+        <div class="pure-u-1-2">
+            <div id="vax_isotype" class="vis-container"></div>
+        </div>
     </div>
 
 
@@ -116,8 +152,9 @@
         
         var vax_area = "js/vaccine_malaysia.vg.json";
         vegaEmbed('#vax_area', vax_area);
-
-
+        
+        var vax_isotype = "js/isotypegrid.vg.json";
+        vegaEmbed('#vax_isotype', vax_isotype);
 
         print(brush)
     </script>
