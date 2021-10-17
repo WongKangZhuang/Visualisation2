@@ -1,0 +1,27 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/covid_states_population.csv"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "field": "Population numbers",
+        "type": "quantitative",
+        "scale": {"zero": false},
+        "axis": {"gridOpacity": 0}
+      },
+      "y": {
+        "field": "Total Cases",
+        "type": "quantitative",
+        "scale": {"zero": false},
+        "axis": {"gridOpacity": 0}
+      },
+      "color": {"field": "State", "type": "nominal"},
+      "tooltip": [
+        {"field": "State"},
+        {"field": "Population numbers"},
+        {"field": "Total Cases"}
+      ]
+    }
+  }

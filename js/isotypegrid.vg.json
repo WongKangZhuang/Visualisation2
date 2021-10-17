@@ -1,0 +1,121 @@
+{
+    "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height":400,
+    "data":{
+       "url":"https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/vax_progress_malaysia.csv"
+    },
+     "params": [
+    {
+      "name": "place",
+      "value": "Malaysia",
+      "bind": {
+      "input": "select",
+      "options": [
+        "Malaysia",
+        "Selangor and Kuala Lumpur",
+        "Labuan",
+        "Negeri Sembilan",
+        "Penang",
+        "Perlis",
+        "Sarawak",
+        "Melaka",
+        "Johor",
+        "Perak",
+        "Pahang",
+        "Kedah",
+        "Terengganu",
+        "Sabah",
+        "Kelantan"
+        ],
+      "labels":[
+        "Malaysia",
+        "Klang Valley",
+        "Labuan",
+        "Negeri Sembilan",
+        "Penang",
+        "Perlis",
+        "Sarawak",
+        "Melaka",
+        "Johor",
+        "Perak",
+        "Pahang",
+        "Kedah",
+        "Terengganu",
+        "Sabah",
+        "Kelantan"
+        ],
+      "name": "Area: "
+      }
+    }
+  ],
+   "transform": [
+      {"filter": "datum.ID == place"}
+   ],
+    "layer":[
+       {
+          "mark":{
+             "type":"point",
+             "filled": true
+          },
+          "encoding":{
+             "x":{
+                "field":"Col",
+                "type":"quantitative",
+                "axis":null
+             },
+             "y":{
+                "field":"Row",
+                "type":"quantitative",
+                "axis":null
+             },
+             "shape": {
+                  "value": "M1.7 -1.7h-0.8c0.3 -0.2 0.6 -0.5 0.6 -0.9c0 -0.6 -0.4 -1 -1 -1c-0.6 0 -1 0.4 -1 1c0 0.4 0.2 0.7 0.6 0.9h-0.8c-0.4 0 -0.7 0.3 -0.7 0.6v1.9c0 0.3 0.3 0.6 0.6 0.6h0.2c0 0 0 0.1 0 0.1v1.9c0 0.3 0.2 0.6 0.3 0.6h1.3c0.2 0 0.3 -0.3 0.3 -0.6v-1.8c0 0 0 -0.1 0 -0.1h0.2c0.3 0 0.6 -0.3 0.6 -0.6v-2c0.2 -0.3 -0.1 -0.6 -0.4 -0.6z"
+               },
+             "color":{
+                "field":"vax_status",
+                "type":"nominal",
+                "scale":{
+                   "type":"ordinal",
+                   "domain":[
+                      "Fully vaccinated",
+                      "Partially vaccinated",
+                      "Not vaccinated"
+                   ],
+                   "range":[
+                     "#31a354",
+                     "#a1d99b",
+                     "#bdbdbd"
+                   ]
+                },
+                "legend":{
+                   "labelFontSize":13,
+                   "titleFontSize":16,
+                   "padding": 45,
+                   "title":"Vaccination status"
+                }
+             },
+            "size": {"value": 50},
+             "tooltip":[
+                {
+                   "field":"vax_status",
+                   "title": "Vaccination status"
+                },
+                {
+                   "field":"Percentage",
+                   "type":"nominal",
+                   "title":"Percentage"
+                }
+             ]
+          }
+       }
+    ],
+    "view": {
+       "stroke":null
+    },
+      "config": {
+    "legend": {
+      "titlePadding": 14
+    }
+  }
+ }

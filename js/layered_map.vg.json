@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "height": 600,
+  "height": 500,
   "width": 800,
   "projection": {"type": "conicEqualArea", "rotate": [-120, 0, 0]},
   "layer": [
@@ -13,7 +13,7 @@
           "feature": "states"
         }        
       },
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "black", "strokeWidth": 2}
     },
     {
       "data": {
@@ -40,7 +40,8 @@
         "type": "conicEqualArea", "rotate": [-120, 0, 0]
       },
       "mark": {
-        "type": "geoshape"
+        "type": "geoshape",
+        "stroke": "black"
       },
       "encoding": {
         "color": {
@@ -71,7 +72,7 @@
       "data": {
         "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/total_deaths_state.csv"
       },
-      "mark": {"type": "circle"},   
+      "mark": {"type": "circle", "opacity": 0.4},   
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
@@ -81,14 +82,13 @@
           "scale": {"domain": [100, 1000, 3000, 6000,9000]},
           "legend": {
             "orient": "right",           
-            "titleFont": "Trebuchet MS",
             "titleColor": "black",
             "labelColor": "black",
             "labelOffset": 10,
             "titlePadding": 10,
             "symbolOffset": -10,
-            "symbolStrokeColor": "#0F4C81",
-            "symbolFillColor": "#0F4C81",
+            "symbolStrokeColor": "#2e4c66",
+            "symbolFillColor": "#2e4c66",
             "formatType": "number"          
           }
         },
@@ -97,7 +97,7 @@
           "type": "nominal",
           "legend": null,
           "scale":{
-            "range": ["#0F4C81"]
+            "range": ["#2e4c66"]
           }
         },
         "tooltip": [

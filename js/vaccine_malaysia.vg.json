@@ -1,53 +1,79 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "The vaccination progress of Malaysia" },
-
-    "data": {
-    "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/vax_malaysia_daily.csv"
-    },
-    "width": 800,
-    "height": 800,
+    "width": 950,
+    "height": 400,
+    "data": {"url":"https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/vax_malaysia_daily.csv"},
     "transform": [
+        {"calculate": "datum.cumul_partial/32655300*100", "as": "At least 1 dose"},
+        {"calculate": "datum.cumul_full/32655300*100", "as": "Fully Vaccinated"}
+    ],
+    "title": "Total Percentage of Population Vaccinated",
+    "encoding": {
+      "x": {
+        "timeUnit": "yearmonthdate",
+        "field": "date", 
+        "axis": {"title": "","gridOpacity":0}
+      },
+      "y": {
+        "type": "quantitative", 
+        "axis": {"title": "", "gridOpacity":0}
+      },
+      "tooltip":[
+        {"field": "date", "type": "temporal", "title": "Date"},
         {
-            "filter": 
-            {
-                "field": "date", 
-                "range":[
-                    {"year": 2021, "month": 2, "date": 24}, {"year": 2021, "month": 10, "date":1}
-                ]
+          "field": "At least 1 dose",
+          "type": "quantitative",
+          "title": "At least 1 dose",
+          "format": ".1f"
+        },
+        {
+          "field": "Fully Vaccinated",
+          "type": "quantitative",
+          "title": "Fully Vaccinated",
+          "format": ".1f"
+        }
+      ]
+    },
+      "layer": [
+        {     
+            "mark": {"type": "area", "color": "darkgreen", "opacity": 0.3},
+            "encoding": {
+                "y": {"field": "At least 1 dose"}
+                
             }
         },
-        {"calculate": "datum.cumul_partial/32655300 * 100", "as": "At least 1 dose"},
-        {"calculate": "datum.cumul_full/32655300 * 100", "as": "Fully vaccinated"}
-
-    ],
-    "repeat": {
-        "layer": ["At least 1 dose", "Fully vaccinated"]
-    },
-    
-    "spec": {
-        "mark": "area",
-        "encoding": {            
-            "x": {
-                "field": "date",
-                "type": "temporal"
-            },
-            "y": {
-                "field": {"repeat": "layer"},
-                "type": "quantitative"
-            },
-            "color": {
-                "datum": {"repeat": "layer"},
-                "type": "nominal"
-            },
-            "tooltip": [
-                {"field": "date", "type": "temporal", "title": "Date"},
-                {"field": "At least 1 dose", "type": "quantitative", "format": ".1f"},
-                {"field": "Fully vaccinated", "type": "quantitative", "format": ".1f"}
-
-            ]
-
+        {   
+            "mark": {"type": "area", "color": "green","opacity": 0.5},
+            "encoding": {
+                "y": {"field": "Fully Vaccinated"}
+                
+            }
+        },
+        {
+          "params": [
+          {
+            "name": "ruler",
+            "select": {
+              "type": "point",
+              "encodings": ["x"],
+              "fields": ["date"],
+              "on": "mousemove",
+              "nearest": true
+            }
+          }
+          ],
+        "mark": {"type": "point"},
+        "encoding": {
+          "opacity": {"value": 0}
         }
-    }
-
-   }
+      },
+      {
+        "transform": [
+          {"filter": {"and": ["ruler.date", {"param": "ruler"}]}}
+          ],
+        "mark": "rule",
+        "encoding": {
+            "color": {"value": "black"}
+        }
+      }
+    ]   
+  }

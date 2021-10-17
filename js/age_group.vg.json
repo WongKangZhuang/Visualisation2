@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 800,
+  "width": 500,
+  "height": 300,
   "params": [
     {
       "name": "month_selection",
@@ -73,7 +73,7 @@
       "legend": {
         "orient": "top-right",
         "labelFontSize": 12,
-        "titleFontSize": 15
+        "titleFontSize": 10
       }
     },
     "tooltip": [
@@ -88,27 +88,26 @@
         "innerRadius": 80, 
         "outerRadius": 120, 
         "stroke": "#1B262C", 
-        "strokeWidth": 4,
-        "x": {"expr": "width / 2"}
+        "strokeWidth": 2
       }
     },    
     {
       "mark": {
         "type": "text",
-        "radius": 130,
-        "radiusOffset": 13,
+        "radius": 132,
+        "radiusOffset": 15,
         "fontSize": 3
-        
       },
+      
       "transform": [
-        {"calculate": "datum.total_cases + ' cases'", "as": "cases"}
+        {"calculate": "datum.total_cases + ' case(s)'", "as": "cases"}
       ],
       "encoding": {
         "text": {
           "field": "cases", "type": "nominal"
         },
         "size":{
-          "value": {"expr": "width/42"}
+          "value": 13
         }
       }
      
@@ -116,7 +115,7 @@
   ],
   "config": {
     "legend": {
-      "titlePadding": 10
+      "titlePadding": 5
     }
   }
 }
