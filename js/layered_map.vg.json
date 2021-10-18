@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": 500,
-  "width": 800,
+  "width": 750,
   "projection": {"type": "conicEqualArea", "rotate": [-120, 0, 0]},
   "layer": [
     {
@@ -32,9 +32,13 @@
               "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/total_deaths_state.csv"
             },
             "key": "State",
-            "fields": ["Total Cases"]
+            "fields": ["Total_Cases", "Population"]
           }
+        },
+        {
+          "calculate": "datum.Total_Cases/datum.Population * 100000", "as": "Total cases per 100,000 people"
         }
+
       ],
       "projection": {
         "type": "conicEqualArea", "rotate": [-120, 0, 0]
@@ -45,26 +49,30 @@
       },
       "encoding": {
         "color": {
-          "field": "Total Cases",
+          "field": "Total cases per 100,000 people",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
-            "domain": [10000, 70000, 140000, 225000],
+            "domain": [2000, 5000, 7000, 10000],
             "range": ["#fcbba1", "#fc9272", "#fb6a4a", "#de2d26", "#a50f15"]
           },
 
           "legend": {
+            "title": "Total cases per 100,000",
+            "orient": "left",            
+            "titleFontSize": 12,
+            "labelFontSize": 12,
             "labelColor": "black",
             "titleColor": "black",
-            "orient": "left",            
             "labelOffset": 10,
             "titlePadding": 10
+
 
           }
         },
         "tooltip": [
           {"field": "properties.Name", "type": "nominal", "title": "State"},
-          {"field": "Total Cases", "type": "quantitative", "format": ",", "title": "Total Cases"}
+          {"field": "Total cases per 100,000 people", "type": "quantitative", "format": ".1f"}
         ]
       }
     },
@@ -72,23 +80,32 @@
       "data": {
         "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/total_deaths_state.csv"
       },
-      "mark": {"type": "circle", "opacity": 0.4},   
+      "transform": [
+        {"calculate": "datum.Total_Deaths/datum.Population * 100000", "as": "Total deaths per 100,000 people"}
+      ],
+      "mark": {"type": "circle", "opacity": 0.43},   
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "size": {
-          "field": "Total Deaths",
+          "field": "Total deaths per 100,000 people",
           "type": "quantitative",
-          "scale": {"domain": [100, 1000, 3000, 6000,9000]},
+          "scale": {
+             "type": "threshold",
+             "domain": [20, 60, 100, 140]
+          },
           "legend": {
-            "orient": "right",           
+            "title": "Total deaths per 100,000",
+            "orient": "right",         
+            "titleFontSize": 12,
+            "labelFontSize": 12,  
             "titleColor": "black",
             "labelColor": "black",
             "labelOffset": 10,
             "titlePadding": 10,
             "symbolOffset": -10,
-            "symbolStrokeColor": "#2e4c66",
-            "symbolFillColor": "#2e4c66",
+            "symbolStrokeColor": "#183957",
+            "symbolFillColor": "#183957",
             "formatType": "number"          
           }
         },
@@ -97,17 +114,23 @@
           "type": "nominal",
           "legend": null,
           "scale":{
-            "range": ["#2e4c66"]
+             "type": "threshold",
+            "range": ["#183957"]
           }
         },
         "tooltip": [
           {"field": "State", "type": "nominal"},
-          {"field": "Total Deaths", "type": "quantitative", "format": ",", "title": "Total Deaths"}
+          {"field": "Total deaths per 100,000 people", "type": "quantitative", "format": ".1f"}
         ]
       }
     }   
   ],
   "config": {
-    "font": "Trebuchet MS"   
+    "style": {
+      "cell": {
+        "stroke": null
+      }
+    },
+    "background": "whitesmoke"
   }
 }

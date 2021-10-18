@@ -3,21 +3,12 @@
     "data": {
         "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/covid_malaysia.csv"
     },
-    "height": 200,
-    "width": 400,
+    "height": 300,
+    "width": 500,
     "transform": [
       {"filter": {"field": "year", "equal": 2020}}
     ],
     "title": "Covid cases (2020)",
-    "config": {
-        "view": {
-            "strokeWidth": 0,
-            "step": 13
-        },
-        "axis": {
-            "domain": false
-        }
-    },
     "mark": "rect",
     "encoding": {
         "x": {
@@ -43,7 +34,7 @@
             "scale" : {
               "type": "threshold",
               "domain": [10, 100, 300, 900],
-              "range": ["#fff5eb", "#fee6ce", "#fdd0a2", "#fdae6b", "#fd8d3c"]
+              "range": ["#fff7ec", "#fee6ce", "#fdd0a2", "#fdae6b", "#fd8d3c"]
             },
             "legend": {
                 "title": "Total cases (per day)"
@@ -52,6 +43,16 @@
         "tooltip": [
           {"field": "cases_new", "type": "quantitative", "title": "Total cases"}
         ]
+    },
+    "config": {
+        "view": {
+            "strokeWidth": 0,
+            "step": 13
+        },
+        "axis": {
+            "domain": false
+        },
+        "background": "whitesmoke"
     }
   }
   

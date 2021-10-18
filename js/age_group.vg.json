@@ -2,6 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 500,
   "height": 300,
+
   "params": [
     {
       "name": "month_selection",
@@ -69,11 +70,13 @@
     "color": {
       "field": "category", 
       "type": "nominal",
-      "scale": {"range": ["#a6611a", "#018571", "#dfc27d", "#c7eae5"]},
+      "scale": {"range": ["#a6611a", "#018571", "#dfc27d", "#99d8c9"]},
       "legend": {
         "orient": "top-right",
         "labelFontSize": 12,
-        "titleFontSize": 10
+        "titleFontSize": 10,
+        "title": "Age group",
+        "values": ["Child", "Adolescent", "Adult", "Elder"]
       }
     },
     "tooltip": [
@@ -100,7 +103,7 @@
       },
       
       "transform": [
-        {"calculate": "datum.total_cases + ' case(s)'", "as": "cases"}
+        {"calculate": "datum.total_cases + ' cases'", "as": "cases"}
       ],
       "encoding": {
         "text": {
@@ -116,6 +119,12 @@
   "config": {
     "legend": {
       "titlePadding": 5
-    }
+    },
+    "style": {
+      "cell": {
+        "stroke": null
+      }
+    },
+    "background": "whitesmoke"
   }
 }

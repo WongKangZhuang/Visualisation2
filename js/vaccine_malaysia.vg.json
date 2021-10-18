@@ -1,7 +1,9 @@
 {
-    "width": 950,
+    "width": 1000,
     "height": 400,
-    "data": {"url":"https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/vax_malaysia_daily.csv"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/vax_malaysia_daily.csv"
+    },
     "transform": [
         {"calculate": "datum.cumul_partial/32655300*100", "as": "At least 1 dose"},
         {"calculate": "datum.cumul_full/32655300*100", "as": "Fully Vaccinated"}
@@ -75,5 +77,13 @@
             "color": {"value": "black"}
         }
       }
-    ]   
+    ],
+    "config": {
+      "style": {
+        "cell": {
+          "stroke": null
+        }
+      },
+      "background": "whitesmoke"
+  }
   }

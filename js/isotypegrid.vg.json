@@ -1,7 +1,12 @@
 {
     "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 400,
-    "height":400,
+    "width": 450,
+    "height":450,
+    "title": {
+       "text": "Each human represents 1 percent of the population",
+       "align": "center",
+       "color": "darkgray"
+      }, 
     "data":{
        "url":"https://raw.githubusercontent.com/WongKangZhuang/Visualisation2/main/data/wrangled_data/vax_progress_malaysia.csv"
     },
@@ -83,14 +88,14 @@
                       "Not vaccinated"
                    ],
                    "range":[
-                     "#31a354",
-                     "#a1d99b",
+                     "#005a32",
+                     "#41ab5d",
                      "#bdbdbd"
                    ]
                 },
                 "legend":{
                    "labelFontSize":13,
-                   "titleFontSize":16,
+                   "titleFontSize":13,
                    "padding": 45,
                    "title":"Vaccination status"
                 }
@@ -116,6 +121,7 @@
       "config": {
     "legend": {
       "titlePadding": 14
-    }
+    },
+    "background": "whitesmoke"
   }
  }
