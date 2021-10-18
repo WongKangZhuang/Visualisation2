@@ -1,30 +1,96 @@
-.page{
-	width: 1000px;    
-	background-color: whitesmoke;   
-	margin: auto;
-	padding: 20px
- }
-
- h1 {
-     text-align: center;
-	 padding-top: 20px;
-	 font-size: 60px;
+h1 {
+   text-align: center;
+	padding-top: 20px;
+	font-size: 60px;
+   font-family: 'Roboto Mono', monospace;
  }
 
  h2 {
-    text-align: center;
-    color: white;
-    background-color: rgb(46, 71, 80);
-    padding: 20px;
-    font-size: 35px;
+   text-align: center;
+   font-family: 'Roboto Mono', monospace;
+   color: white;
+   background-color: rgb(46, 71, 80);
+   padding: 20px;
+   font-size: 35px;
  }
 
  h3 {
-    text-align: center;
-    padding: 1px;
-    font-size: 30px;
-    color: rgb(46, 71, 80);
+   text-align: center;
+   padding: 1px;
+   font-size: 35px;
+   color: rgb(46, 71, 80);
+   font-family: 'Roboto Mono', monospace;
  }
+
+ p {
+   font-family: 'Roboto', sans-serif;
+	padding: 15px;
+	font-size: 23px;
+}
+
+#credits{
+   font-size: 17px;
+}
+
+#end-banner{
+   padding-bottom: 1px;
+}
+
+.red-font{
+   color: rgb(184, 38, 38);
+}
+
+.darkred-emp-font{
+   color: #7f2704;
+   font-size: 26px;
+}
+
+.selangor-darkred-font{
+   color: #a50f15;
+   font-size: 26px;
+}
+
+.blue-font{
+   color: #163d61;
+}
+
+.darkgreen-font{
+   color: #005a32;
+}
+
+.lightgreen-font{
+   color: #41ab5d;
+}
+
+.grey-font{
+   color: #bdbdbd;
+}
+
+.black-font{
+   color: black
+}
+.banner-colour-font{
+   color: rgb(46, 71, 80);
+	font-size: 26px;
+}
+
+.adult-cat-font{
+   color: #018571;
+}
+
+.children-cat-font{
+   color: #dfc27d
+}
+
+.page{
+	width: 1100px;    
+	background-color: whitesmoke;   
+	margin: auto;
+ }
+
+ .viz-container {
+   width: 100%;
+}
 
 .pure-g{
 	margin-bottom: 20px;
@@ -35,11 +101,26 @@
 	margin: 50px;
 }
 
-p {
-	padding: 20px;
-	font-size: 25px;
+.long-chart{
+   width: 100%;
+   align-self: center;
+   padding-left: 15px;
+   padding-right: 10px;
+}
+.small-chart-heat {
+   width: 100%;
+   align-self: center;
+   padding-left: 220px;
 }
 
-.viz-container {
-    width: 100%;
+.small-chart-donut{
+   width: 100%;
+   align-self: center;
+   padding-left: 300px;
+}
+
+.small-chart-iso{
+   width: 100%;
+   align-self: center;
+   padding-left: 260px;
 }
